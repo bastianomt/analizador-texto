@@ -5,6 +5,7 @@ PALABRAS_VACIAS = {"de", "la", "el", "y", "en", "un", "una", "con", "a", "los", 
 
 
 def normalizar(texto: str) -> list[str]:
+    """Devuelve las palabras del texto en minusculas y sin puntuacion"""
     texto = texto.lower()
     return re.findall(r"\w+", texto)
 

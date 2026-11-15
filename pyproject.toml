@@ -1,7 +1,7 @@
  [project]
 name = "analizador-texto"
 version = "0.1.0"
-description = "Add your description here"
+description = "mini proyecto para practicar python para buscar palabras mas repetidas de un fichero"
 readme = "README.md"
 authors = [
     { name = "Sebastian", email = "bastianomoret@gmail.com" }
@@ -11,8 +11,6 @@ dependencies = []
 
 [project.scripts]
 analizador-texto = "analizador_texto.cli:main"
-
-# "analizador_texto:main"
 
 [build-system]
 requires = ["uv_build>=0.12.15,<0.13.0"]

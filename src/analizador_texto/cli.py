@@ -19,3 +19,6 @@ def main() -> None:
     print("Top palabras:")
     for palabra, veces in palabras_mas_repetidas:
         print(f"{palabra} --> {veces}")
+
+    print(f"Total de palabras (sin vacias): {len(texto_sin_vacias)}")
+    print(f"Palabras distintas: {len(set(texto_sin_vacias))}")

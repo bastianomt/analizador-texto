@@ -28,7 +28,7 @@ def main() -> None:
         palabras = texto_normalizado
 
     if not palabras:
-        print("El fichero no tiene palabras para analizar")
+        print("Todas las palabras restantes son vacias")
         return
 
     top = analisis.top_palabras(palabras, args.top)

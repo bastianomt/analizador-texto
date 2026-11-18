@@ -13,7 +13,13 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    print(f"Analizando: {args.ruta}")
+    if not args.ruta.is_file():
+        parser.error(f"Ruta incorrecta. No existe la ruta --> {args.ruta}")
+
+    if args.top < 1:
+        parser.error("--top debe ser 1 o mayor")
+
+    print(f"Analizando ruta: {args.ruta}")
     texto = args.ruta.read_text(encoding="utf-8")
 
     texto_normalizado = analisis.normalizar(texto)

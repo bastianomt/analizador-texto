@@ -33,9 +33,12 @@ def main() -> None:
 
     top = analisis.top_palabras(palabras, args.top)
 
-    print("Top palabras:")
-    for palabra, veces in top:
-        print(f"{palabra} --> {veces}")
+    if top[0][1] == 1:
+        print("Ninguna palabra se repite")
+    else:
+        print("Top palabras:")
+        for palabra, veces in top:
+            print(f"{palabra} --> {veces}")
 
     print(f"Total de palabras: {len(palabras)}")
     print(f"Palabras distintas: {len(set(palabras))}")
